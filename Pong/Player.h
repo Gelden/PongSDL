@@ -11,6 +11,7 @@ class Player : public GameObject
 {	 
 
 public: 
+	Player();
 	Player(Vector2 pPosition, Texture* pTexture); 
 	void Draw(SDL_Renderer* pRender); 
 	void Update();

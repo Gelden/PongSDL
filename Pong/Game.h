@@ -1,18 +1,19 @@
 #pragma once 
 #include "Player.h" 
-#include "Time.h"
+#include "Time.h" 
+#include "System.h"
 class Game
 { 
 private: 
 	Texture* mBackground;  
-	Player mPlayer;  
-	Time mTimer;
+	Player* mPlayer;  
 public: 
-	Game(); 
-	~Game(); 
+	Game() : mBackground(NULL), mPlayer(NULL) {}
+	~Game() {}
 
-	bool Initialize(); 
-	void Shutdown(); 
-	void Update(float dt);
+	bool Initialize();
+	void Draw();
+	void Update(float dt);  
+	
 
 };

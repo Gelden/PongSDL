@@ -2,7 +2,9 @@
 
 Time::Time()
 { 
-	Reset();
+	mStartTime = 0;
+	mElapsedTime = 0;
+	mDeltaTime = 0;
 }
 
 void Time::Tick()

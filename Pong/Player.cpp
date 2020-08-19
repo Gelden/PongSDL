@@ -1,5 +1,11 @@
 #include "Player.h"
 
+Player::Player()
+{ 
+	mTranform = Vector2(0, 0); 
+	mTexture = NULL;
+}
+
 Player::Player(Vector2 pPosition, Texture* pTexture)
 { 
 	mTranform = pPosition; 
