@@ -13,7 +13,5 @@ public:
 
 	bool Initialize();
 	void Draw();
-	void Update(float dt);  
-	
-
+	void Update(float dt);
 };

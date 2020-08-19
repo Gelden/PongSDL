@@ -56,6 +56,9 @@
     <ClInclude Include="System.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Ball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Sprites\BallSprite.jpg">
