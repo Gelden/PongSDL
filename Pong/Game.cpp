@@ -2,6 +2,8 @@
 
 bool Game::Initialize()
 {
+    
+    
     mBackground = Texture::Load("Backgrounds\\g845.png", System::GetRenderer()); 
     mPlayer = new Player(Vector2(20, System::GetScreenHeight() / 2), Texture::Load("Sprites\\PlayerSprite.jpg", System::GetRenderer()));  
     mBall = new Ball(Vector2(0, 0), Texture::Load("Sprites\\BallSprite.jpg", System::GetRenderer()));

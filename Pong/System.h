@@ -8,5 +8,7 @@ namespace System
 	int GetScreenWidth();
 	int GetScreenHeight(); 
 
-	float GetDeltaTime();
+	float GetDeltaTime(); 
+
+	bool Initialize();
 }

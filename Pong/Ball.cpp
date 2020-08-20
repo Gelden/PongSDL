@@ -28,8 +28,8 @@ void Ball::Reset()
 	//Reset the Position 
 	mPosition.X = System::GetScreenWidth() / 2; //Start in the middle; 
 	mPosition.Y = 0; 
-	mSpeedX = 2; 
-	mSpeedY = 2;
+	mSpeedX = 20.f; 
+	mSpeedY = 20.f;
 }
 
 void Ball::Draw(SDL_Renderer* pRenderer)

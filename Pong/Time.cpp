@@ -10,7 +10,7 @@ Time::Time()
 void Time::Tick()
 { 
 	mElapsedTime = SDL_GetTicks() - mStartTime; 
-	mDeltaTime = mElapsedTime * 0.001f;
+	mDeltaTime = mElapsedTime * 0.001f;  
 }
 
 void Time::Reset()
