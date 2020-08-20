@@ -5,16 +5,22 @@ class GameObject
 {
 protected: 
 	Texture* mTexture; 
-	Vector2 mTranform; 
+	Vector2 mPosition; 
 public: 
-	GameObject() :mTexture(NULL), mTranform(Vector2(0,0)) {} 
+	GameObject() :mTexture(NULL), mPosition(Vector2(0,0)) {} 
 	~GameObject() {}  
 
 	float Width() const { return (float)mTexture->GetWidth(); }
 	float Height() const { return (float)mTexture->GetHeight(); } 
 
-	float Left() const { return mTranform.X - 0.5f * Width(); }
-	float Right() const { return mTranform.X + 0.5 * Width(); }
-	float Top() const { return mTranform.Y - 0.5f * Height(); }
-	float Bottom() const { return mTranform.Y + 0.5f * Height(); }
+	//Collision Accessors
+	float Left() const { return mPosition.X - 0.5f * Width(); }
+	float Right() const { return mPosition.X + 0.5 * Width(); }
+	float Top() const { return mPosition.Y - 0.5f * Height(); }
+	float Bottom() const { return mPosition.Y + 0.5f * Height(); } 
+
+	void SetLeft(float x) { mPosition.X = x + 0.5f * Width(); }
+	void SetRight(float x) { mPosition.X = x - 0.5f * Width(); }
+	void SetTop(float y) { mPosition.Y = y + 0.5 * Height(); }
+	void SetBottom(float y) { mPosition.Y = y - 0.5 * Height(); }
 };

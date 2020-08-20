@@ -2,13 +2,13 @@
 
 Player::Player()
 { 
-	mTranform = Vector2(0, 0); 
+	mPosition = Vector2(0, 0); 
 	mTexture = NULL;
 }
 
 Player::Player(Vector2 pPosition, Texture* pTexture)
 { 
-	mTranform = pPosition; 
+	mPosition = pPosition; 
 	mTexture = pTexture;
 }
 
@@ -20,8 +20,8 @@ void Player::Draw(SDL_Renderer* pRender)
 		SDL_Rect tmpRect;
 		tmpRect.w = mTexture->GetWidth();
 		tmpRect.h = mTexture->GetHeight();
-		tmpRect.x = (int)(this->mTranform.X - mTexture->GetWidth() / 2);
-		tmpRect.y = (int)(this->mTranform.Y - mTexture->GetHeight() / 2);
+		tmpRect.x = (int)(this->mPosition.X - mTexture->GetWidth() / 2);
+		tmpRect.y = (int)(this->mPosition.Y - mTexture->GetHeight() / 2);
 
 		SDL_RenderCopy(pRender, mTexture->GetTexture(), NULL, &tmpRect);
 	}
@@ -33,7 +33,7 @@ void Player::Update()
 
 	//Handle Mouse Functionality 
 	Uint32 mouseState = SDL_GetMouseState(NULL, &deltaY); 
-	this->mTranform.Y = deltaY;
+	this->mPosition.Y = deltaY;
 	//Handle Keyboard Functionality 
 }
 

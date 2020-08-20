@@ -6,5 +6,7 @@ namespace System
 	SDL_Renderer* GetRenderer(); 
 	
 	int GetScreenWidth();
-	int GetScreenHeight();
+	int GetScreenHeight(); 
+
+	float GetDeltaTime();
 }

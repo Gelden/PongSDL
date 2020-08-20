@@ -15,7 +15,8 @@ namespace System
 {
 	SDL_Renderer* GetRenderer() { return gRenderer; } 
 	int GetScreenWidth() { return screenWidth; } 
-	int GetScreenHeight() { return screenHeight;} 
+	int GetScreenHeight() { return screenHeight;}  
+	float GetDeltaTime() { return gTime.DeltaTime(); }
 }
 
 int main(int argc, char** argv)

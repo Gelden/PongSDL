@@ -1,7 +1,7 @@
-﻿  Game.cpp
-C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(17,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(6,64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Source.cpp
-C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(17,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-  Pong.vcxproj -> C:\Users\Trevor\source\repos\PongSDL\Debug\Pong.exe
+﻿  Ball.cpp
+D:\Code\Projects\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+D:\Code\Projects\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Code\Projects\PongSDL\Pong\GameObject.h(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\Code\Projects\PongSDL\Pong\Ball.cpp(29,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Code\Projects\PongSDL\Pong\Ball.cpp(59,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Pong.vcxproj -> D:\Code\Projects\PongSDL\Debug\Pong.exe
