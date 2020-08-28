@@ -1,8 +1,19 @@
-﻿  Game.cpp
+﻿  AI.cpp
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(8,64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(10,82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(10,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(6,64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(8,82): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\Game.cpp(8,51): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Source.cpp
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\Source.cpp(93,25): warning C4244: 'argument': conversion from 'float' to 'Uint32', possible loss of data
+  Generating Code...
+C:\Users\Trevor\source\repos\PongSDL\Pong\Source.cpp(41): warning C4715: 'System::Initialize': not all control paths return a value
   Pong.vcxproj -> C:\Users\Trevor\source\repos\PongSDL\Debug\Pong.exe

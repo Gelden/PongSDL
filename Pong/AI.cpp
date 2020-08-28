@@ -3,13 +3,15 @@
 AI::AI()
 { 
 	mPosition = Vector2(0, 0); 
-	mTexture = NULL;
+	mTexture = NULL; 
+	mSpeed = 0.f;
 }
 
 AI::AI(Vector2 pPosition, Texture* pTexture)
 { 
 	mPosition = pPosition; 
-	mTexture = pTexture;
+	mTexture = pTexture; 
+	mSpeed = 10.0f;
 } 
 
 void AI::Draw(SDL_Renderer* pRender)
@@ -41,8 +43,8 @@ void AI::PredictBallPath(float yPos)
 	mPosition.Y = deltaY;
 }
 
-void AI::Update()
-{  
-	
+void AI::Update(float dt)
+{ 
+
 }
 

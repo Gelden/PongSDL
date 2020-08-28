@@ -29,9 +29,50 @@ void Game::Update(float dt)
     SDL_RenderClear(System::GetRenderer());
     mPlayer->Update();  
     mBall->Update(System::GetDeltaTime()); 
-    mAI->PredictBallPath(mBall->GetYPos()); 
+    HandleCollision();
     Draw(); //Draw the background;
-    mPlayer->Draw(System::GetRenderer());  //Draw The Player;  
+    mPlayer->Draw(System::GetRenderer()); //Draw The Player;  
     mAI->Draw(System::GetRenderer());
     mBall->Draw(System::GetRenderer()); 
+}
+//Handle Collision for all Game Objects
+void Game::HandleCollision()
+{ 
+    //BALL WORLD BOUNDS COLLISION  
+    if (mBall->Top() < WorldTop())
+    {
+        mBall->SetTop(0.0f);
+        mBall->SetYSpeed(-(mBall->GetYSpeed()));
+    }
+    if (mBall->Bottom()>WorldBottom())
+    {
+        mBall->SetBottom(WorldBottom());
+        mBall->SetYSpeed(-(mBall->GetYSpeed()));
+    } 
+   
+    //PLAYER WORLD BOUNDS COLLISION  
+    if (mPlayer->Top() < WorldTop())
+    {
+        mPlayer->SetTop(WorldTop());
+    } 
+    if (mPlayer->Bottom() > WorldBottom())
+    {
+        mPlayer->SetBottom(WorldBottom());
+    } 
+
+    //AI WORLD BOUNDS COLLISION  
+    if (mAI->Top() < WorldTop())
+    {
+        mAI->SetTop(WorldTop());
+    } 
+    if (mAI->Top() > WorldBottom())
+    {
+        mAI->SetBottom(WorldBottom());
+    } 
+    //BALL PLAYER COLLISION  
+    
+    
+
+
+    //BALL AI COLLISION
 }

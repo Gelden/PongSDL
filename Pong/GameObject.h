@@ -14,11 +14,11 @@ public:
 	float Height() const { return (float)mTexture->GetHeight(); } 
 
 	//Collision Accessors
-	float Left() const { return mPosition.X - 0.5f * Width(); }
+	float Left() { return mPosition.X - 0.5f * Width(); }
 	float Right() const { return mPosition.X + 0.5 * Width(); }
 	float Top() const { return mPosition.Y - 0.5f * Height(); }
 	float Bottom() const { return mPosition.Y + 0.5f * Height(); } 
-
+	//Position Mutators
 	void SetLeft(float x) { mPosition.X = x + 0.5f * Width(); }
 	void SetRight(float x) { mPosition.X = x - 0.5f * Width(); }
 	void SetTop(float y) { mPosition.Y = y + 0.5 * Height(); }

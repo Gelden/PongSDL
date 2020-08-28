@@ -3,7 +3,8 @@
 #include "Time.h" 
 #include "System.h" 
 #include "Ball.h" 
-#include "AI.h"
+#include "AI.h" 
+	
 class Game
 { 
 private: 
@@ -17,7 +18,8 @@ public:
 
 	bool Initialize();
 	void Draw();
-	void Update(float dt);  
+	void Update(float dt);   
+	void HandleCollision();
 
 	float WorldLeft() const { return 0.0f; }
 	float WorldRight() const { return (float)System::GetScreenWidth(); }

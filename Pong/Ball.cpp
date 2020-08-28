@@ -18,7 +18,6 @@ Ball::Ball(Vector2 pPosition, Texture* pTexture)
 
 void Ball::Update(float dt)
 { 
-	HandleCollision();
 	mPosition.X += mSpeedX * dt; 
 	mPosition.Y += mSpeedY * dt; 
 }
@@ -28,8 +27,8 @@ void Ball::Reset()
 	//Reset the Position 
 	mPosition.X = System::GetScreenWidth() / 2; //Start in the middle; 
 	mPosition.Y = 0; 
-	mSpeedX = 20.f; 
-	mSpeedY = 20.f;
+	mSpeedX = 10.f; 
+	mSpeedY = 10.f;
 }
 
 void Ball::Draw(SDL_Renderer* pRenderer)
@@ -44,19 +43,4 @@ void Ball::Draw(SDL_Renderer* pRenderer)
 
 		SDL_RenderCopy(pRenderer, mTexture->GetTexture(), NULL, &tmpRect);
 	}
-}
-
-void Ball::HandleCollision()
-{ 
-	//WORLD BOUNDS COLLISION 
-	if (Top() < 0.0f)
-	{
-		SetTop(0.0f); 
-		mSpeedY = -(mSpeedY);
-	} 
-	if (Bottom() > System::GetScreenHeight())
-	{
-		SetBottom(System::GetScreenHeight()); 
-		mSpeedY = -(mSpeedY);
-	}  
 }
