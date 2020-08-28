@@ -58,5 +58,5 @@ void Ball::HandleCollision()
 	{
 		SetBottom(System::GetScreenHeight()); 
 		mSpeedY = -(mSpeedY);
-	} 
+	}  
 }

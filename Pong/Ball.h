@@ -14,5 +14,6 @@ public:
 	void Update(float dt); 
 	void Reset(); //Resets the ball after at the beginning of the game or if a player scores;
 	void Draw(SDL_Renderer* pRenderer);     
-	void HandleCollision();
+	void HandleCollision(); 
+	float GetYPos() { return mPosition.Y; }
 };

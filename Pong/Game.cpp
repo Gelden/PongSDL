@@ -2,12 +2,11 @@
 
 bool Game::Initialize()
 {
-    
-    
     mBackground = Texture::Load("Backgrounds\\g845.png", System::GetRenderer()); 
-    mPlayer = new Player(Vector2(20, System::GetScreenHeight() / 2), Texture::Load("Sprites\\PlayerSprite.jpg", System::GetRenderer()));  
-    mBall = new Ball(Vector2(0, 0), Texture::Load("Sprites\\BallSprite.jpg", System::GetRenderer()));
-    if (!mBackground || !&mPlayer)
+    mPlayer = new Player(Vector2(20, System::GetScreenHeight() / 2), Texture::Load("Sprites\\PlayerSprite.jpg", System::GetRenderer()));   
+    mBall = new Ball(Vector2(0, 0), Texture::Load("Sprites\\BallSprite.jpg", System::GetRenderer())); 
+    mAI = new AI(Vector2(System::GetScreenWidth() - 20, System::GetScreenWidth() / 2), Texture::Load("Sprites\\PlayerSprite.jpg", System::GetRenderer()));
+    if (!mBackground || !&mPlayer || !mBall || !mAI)
         return false; 
     mBall->Reset();
     SDL_RenderClear(System::GetRenderer()); 
@@ -29,8 +28,10 @@ void Game::Update(float dt)
 { 
     SDL_RenderClear(System::GetRenderer());
     mPlayer->Update();  
-    mBall->Update(System::GetDeltaTime());
+    mBall->Update(System::GetDeltaTime()); 
+    mAI->PredictBallPath(mBall->GetYPos()); 
     Draw(); //Draw the background;
-    mPlayer->Draw(System::GetRenderer());  //Draw The Player; 
-    mBall->Draw(System::GetRenderer());
+    mPlayer->Draw(System::GetRenderer());  //Draw The Player;  
+    mAI->Draw(System::GetRenderer());
+    mBall->Draw(System::GetRenderer()); 
 }

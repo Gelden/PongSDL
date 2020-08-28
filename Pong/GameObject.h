@@ -22,5 +22,5 @@ public:
 	void SetLeft(float x) { mPosition.X = x + 0.5f * Width(); }
 	void SetRight(float x) { mPosition.X = x - 0.5f * Width(); }
 	void SetTop(float y) { mPosition.Y = y + 0.5 * Height(); }
-	void SetBottom(float y) { mPosition.Y = y - 0.5 * Height(); }
+	void SetBottom(float y) { mPosition.Y = y - 0.5 * Height(); } 
 };
