@@ -1,7 +1,8 @@
-﻿  AI.cpp
+﻿  Ball.cpp
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(25,44): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Trevor\source\repos\PongSDL\Pong\Ball.cpp(28,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   Game.cpp
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(18,43): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
 C:\Users\Trevor\source\repos\PongSDL\Pong\GameObject.h(24,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data

@@ -59,20 +59,44 @@ void Game::HandleCollision()
     {
         mPlayer->SetBottom(WorldBottom());
     } 
+ 
+    //PLAYER COLLISION   
 
-    //AI WORLD BOUNDS COLLISION  
+    //Paddle
+    if (mBall->Bottom() > mPlayer->Top() && mBall->Top() < mPlayer->Bottom() && mBall->Left() < mPlayer->Right())
+    {
+        mBall->SetLeft(mPlayer->Right());  
+        mBall->SetXSpeed(-(mBall->GetXSpeed()));
+    }   
+
+    //World bounds
+    if (mPlayer->Top() < WorldTop())
+    {
+        mPlayer->SetTop(WorldTop());
+    } 
+    if (mPlayer->Bottom() > WorldBottom())
+    {
+        mPlayer->SetBottom(WorldBottom());
+    }
+   
+        
+
+    //AI COLLISION  
+
+    //Paddle
+    if (mBall->Bottom() > mAI->Top() && mBall->Top() < mAI->Bottom() && mBall->Right() > mAI->Left())
+    {
+        mBall->SetRight(mAI->Left()); 
+        mBall->SetXSpeed(-(mBall->GetXSpeed()));
+    }     
+
+    //World Bounds 
     if (mAI->Top() < WorldTop())
     {
         mAI->SetTop(WorldTop());
-    } 
+    }
     if (mAI->Top() > WorldBottom())
     {
         mAI->SetBottom(WorldBottom());
-    } 
-    //BALL PLAYER COLLISION  
-    
-    
-
-
-    //BALL AI COLLISION
+    }
 }
