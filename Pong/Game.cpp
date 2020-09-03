@@ -28,7 +28,7 @@ void Game::Update(float dt)
 { 
     SDL_RenderClear(System::GetRenderer());
     mPlayer->Update();  
-    mBall->Update(System::GetDeltaTime()); 
+    mBall->Update(); 
     HandleCollision();
     Draw(); //Draw the background;
     mPlayer->Draw(System::GetRenderer()); //Draw The Player;  
@@ -43,7 +43,7 @@ void Game::HandleCollision()
     {
         mBall->SetTop(0.0f);
         mBall->SetYSpeed(-(mBall->GetYSpeed()));
-    }
+    } 
     if (mBall->Bottom()>WorldBottom())
     {
         mBall->SetBottom(WorldBottom());
@@ -66,7 +66,9 @@ void Game::HandleCollision()
     if (mBall->Bottom() > mPlayer->Top() && mBall->Top() < mPlayer->Bottom() && mBall->Left() < mPlayer->Right())
     {
         mBall->SetLeft(mPlayer->Right());  
-        mBall->SetXSpeed(-(mBall->GetXSpeed()));
+        mBall->SetXSpeed(-(mBall->GetXSpeed())); 
+
+        //TODO: Add directional reflection based on top or bottom contact (top up bottom down)
     }   
 
     //World bounds
@@ -77,9 +79,20 @@ void Game::HandleCollision()
     if (mPlayer->Bottom() > WorldBottom())
     {
         mPlayer->SetBottom(WorldBottom());
-    }
-   
-        
+    } 
+
+    //SCORE AREAS 
+    if (mBall->Left() < WorldLeft())
+    {
+        mBall->Reset();  
+        //TODO: INCREMENT PLAYER SCORE
+    }  
+
+    if (mBall->Right() > WorldRight())
+    {
+        mBall->Reset(); 
+        //TODO: INCREMENT AI SCORE
+    } 
 
     //AI COLLISION  
 
@@ -87,15 +100,18 @@ void Game::HandleCollision()
     if (mBall->Bottom() > mAI->Top() && mBall->Top() < mAI->Bottom() && mBall->Right() > mAI->Left())
     {
         mBall->SetRight(mAI->Left()); 
-        mBall->SetXSpeed(-(mBall->GetXSpeed()));
+        mBall->SetXSpeed(-(mBall->GetXSpeed())); 
+        
+        //TODO: Add diretional reflection based on bottom or top edge contact
     }     
 
     //World Bounds 
     if (mAI->Top() < WorldTop())
     {
         mAI->SetTop(WorldTop());
-    }
-    if (mAI->Top() > WorldBottom())
+    } 
+
+    if (mAI->Bottom() > WorldBottom())
     {
         mAI->SetBottom(WorldBottom());
     }

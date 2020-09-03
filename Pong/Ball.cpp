@@ -16,10 +16,10 @@ Ball::Ball(Vector2 pPosition, Texture* pTexture)
 	mSpeedX = 0;
 }
 
-void Ball::Update(float dt)
+void Ball::Update()
 { 
-	mPosition.X += mSpeedX * dt; 
-	mPosition.Y += mSpeedY * dt; 
+	mPosition.X += mSpeedX; 
+	mPosition.Y += mSpeedY; 
 }
 
 void Ball::Reset()
@@ -27,8 +27,8 @@ void Ball::Reset()
 	//Reset the Position 
 	mPosition.X = System::GetScreenWidth() / 2; //Start in the middle; 
 	mPosition.Y = 0; 
-	mSpeedX = 10.f; 
-	mSpeedY = 10.f;
+	mSpeedX = 10.0f; 
+	mSpeedY = 10.0f;
 }
 
 void Ball::Draw(SDL_Renderer* pRenderer)

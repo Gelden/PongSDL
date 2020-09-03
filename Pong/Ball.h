@@ -11,7 +11,7 @@ public:
 	~Ball(){} 
 
 	Ball(Vector2 pPosition, Texture* pTexture); 
-	void Update(float dt); 
+	void Update(); 
 	void Reset(); //Resets the ball after at the beginning of the game or if a player scores;
 	void Draw(SDL_Renderer* pRenderer);    
 
